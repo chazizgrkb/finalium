@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use 'sass:meta';
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
@@ -9,6 +12,16 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+//ugly polyfill to make sure stuff doesn't break on libsass
+@function private-div($a, $b) {
+  @if (meta.function-exists('div', 'math')) {
+    @return math.div($a, $b);
+  }
+  @else {
+    @return $a / $b;
+  }
+}
 
 // Small devices
 @mixin sm {
@@ -57,8 +70,8 @@ $breakpoints: (
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-right: floor(($gap / 2));
-    padding-left: ceil(($gap / 2));
+    padding-right: floor(private-div($gap, 2));
+    padding-left: ceil(private-div($gap, 2));
   }
 }
 
@@ -76,12 +89,12 @@ $breakpoints: (
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index > 0) {
     .col-#{$class}-#{$index} {
-      width: percentage(($index / $grid-columns));
+      width: percentage(private-div($index, $grid-columns));
     }
   }
   @if ($type == push) and ($index > 0) {
     .col-#{$class}-push-#{$index} {
-      left: percentage(($index / $grid-columns));
+      left: percentage(private-div($index, $grid-columns));
     }
   }
   @if ($type == push) and ($index == 0) {
@@ -91,7 +104,7 @@ $breakpoints: (
   }
   @if ($type == pull) and ($index > 0) {
     .col-#{$class}-pull-#{$index} {
-      right: percentage(($index / $grid-columns));
+      right: percentage(private-div($index, $grid-columns));
     }
   }
   @if ($type == pull) and ($index == 0) {
@@ -101,7 +114,7 @@ $breakpoints: (
   }
   @if ($type == offset) {
     .col-#{$class}-offset-#{$index} {
-      margin-left: percentage(($index / $grid-columns));
+      margin-left: percentage(private-div($index, $grid-columns));
     }
   }
 }
