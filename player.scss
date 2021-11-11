@@ -576,80 +576,6 @@
   .yt-uix-button .yt-uix-button-menu:focus {
     outline: none;
   }
-  .yt-uix-button-menu {
-    outline: none;
-    padding: 8px 0;
-    position: absolute;
-    border: 1px solid #ccc;
-    z-index: 2147483647;
-    overflow: auto;
-    background: #fff;
-    border-radius: 2px;
-  }
-  .yt-uix-button-menu-external {
-    overflow: visible;
-  }
-  .yt-uix-button-menu li {
-    margin: 0;
-    padding: 0;
-  }
-  .yt-uix-button-menu li.yt-uix-button-menu-new-section-separator {
-    padding-top: 8px;
-    margin-top: 8px;
-    border-top: 1px solid #b8b8b8;
-  }
-  .yt-uix-button-menu .yt-uix-button-menu-item {
-    display: block;
-    margin: 0;
-    padding: 0 25px;
-    color: #333;
-    font-size: 13px;
-    text-decoration: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    line-height: 25px;
-    cursor: pointer;
-    cursor: hand;
-  }
-  .yt-uix-button-menu-item-selected .yt-uix-button-menu-item {
-    font-weight: bold;
-  }
-  .yt-uix-button-menu .yt-uix-button-menu-item.selected,
-  .yt-uix-button-menu
-    .yt-uix-button-menu-item-highlight
-    .yt-uix-button-menu-item,
-  .yt-uix-button-menu .yt-uix-button-menu-item:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  .yt-uix-button-menu-mask {
-    position: absolute;
-    z-index: 2147483646;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-  div.yt-uix-button-menu > table {
-    background: #ebebeb;
-    border-collapse: separate;
-    border-spacing: 1px;
-  }
-  .yt-uix-button-menu .yt-uix-button-icon-checkbox {
-    float: left;
-    padding: 5px 0 5px 4px;
-  }
-  .yt-uix-button-menu .yt-uix-button-icon-dropdown-checked {
-    background: no-repeat
-      url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflbk2Y8_.png) -54px -262px;
-    background-size: auto;
-    width: 15px;
-    height: 14px;
-  }
-  .yt-uix-button-menu li:hover .yt-uix-button-icon-dropdown-checked {
-    background-position: -99px -103px;
-  }
   .yt-playall-link {
     border: 3px solid #fff;
     padding: 5px 15px;
@@ -1527,20 +1453,6 @@
     -ms-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-  .html5-context-menu {
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-  }
-  .house-brand .html5-context-menu-copy-video-url,
-  .house-brand .html5-context-menu-copy-video-url-at-current-time,
-  .house-brand .html5-context-menu-copy-embed-html {
-    display: none;
   }
   .ytp-button {
     cursor: pointer;
@@ -6764,3 +6676,93 @@
     background-color: #26c;
   }
 }
+
+  .html5-context-menu {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+  .house-brand .html5-context-menu-copy-video-url,
+  .house-brand .html5-context-menu-copy-video-url-at-current-time,
+  .house-brand .html5-context-menu-copy-embed-html {
+    display: none;
+  }
+  
+    .yt-uix-button-menu {
+    outline: none;
+    padding: 8px 0;
+    position: absolute;
+    border: 1px solid #ccc;
+    z-index: 2147483647;
+    overflow: auto;
+    background: #fff;
+    border-radius: 2px;
+  }
+  .yt-uix-button-menu-external {
+    overflow: visible;
+  }
+  .yt-uix-button-menu li {
+    margin: 0;
+    padding: 0;
+  }
+  .yt-uix-button-menu li.yt-uix-button-menu-new-section-separator {
+    padding-top: 8px;
+    margin-top: 8px;
+    border-top: 1px solid #b8b8b8;
+  }
+  .yt-uix-button-menu .yt-uix-button-menu-item {
+    display: block;
+    margin: 0;
+    padding: 0 25px;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: 25px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .yt-uix-button-menu-item-selected .yt-uix-button-menu-item {
+    font-weight: bold;
+  }
+  .yt-uix-button-menu .yt-uix-button-menu-item.selected,
+  .yt-uix-button-menu
+    .yt-uix-button-menu-item-highlight
+    .yt-uix-button-menu-item,
+  .yt-uix-button-menu .yt-uix-button-menu-item:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  .yt-uix-button-menu-mask {
+    position: absolute;
+    z-index: 2147483646;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  div.yt-uix-button-menu > table {
+    background: #ebebeb;
+    border-collapse: separate;
+    border-spacing: 1px;
+  }
+  .yt-uix-button-menu .yt-uix-button-icon-checkbox {
+    float: left;
+    padding: 5px 0 5px 4px;
+  }
+  .yt-uix-button-menu .yt-uix-button-icon-dropdown-checked {
+    background: no-repeat
+      url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflbk2Y8_.png) -54px -262px;
+    background-size: auto;
+    width: 15px;
+    height: 14px;
+  }
+  .yt-uix-button-menu li:hover .yt-uix-button-icon-dropdown-checked {
+    background-position: -99px -103px;
+  }
