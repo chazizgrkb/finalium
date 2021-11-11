@@ -12,11 +12,6 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
-//fuck this polyfill, it's likely breaking production.
-@function private-div($a, $b) {
-  @return math.div($a, $b);
-}
-
 // Small devices
 @mixin sm {
    @media (min-width: #{$screen-sm-min}) {
@@ -64,8 +59,8 @@ $breakpoints: (
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-right: floor(private-div($gap, 2));
-    padding-left: ceil(private-div($gap, 2));
+    padding-right: floor(math.div($gap, 2));
+    padding-left: ceil(math.div($gap, 2));
   }
 }
 
@@ -83,12 +78,12 @@ $breakpoints: (
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index > 0) {
     .col-#{$class}-#{$index} {
-      width: percentage(private-div($index, $grid-columns));
+      width: percentage(math.div($index, $grid-columns));
     }
   }
   @if ($type == push) and ($index > 0) {
     .col-#{$class}-push-#{$index} {
-      left: percentage(private-div($index, $grid-columns));
+      left: percentage(math.div($index, $grid-columns));
     }
   }
   @if ($type == push) and ($index == 0) {
@@ -98,7 +93,7 @@ $breakpoints: (
   }
   @if ($type == pull) and ($index > 0) {
     .col-#{$class}-pull-#{$index} {
-      right: percentage(private-div($index, $grid-columns));
+      right: percentage(math.div($index, $grid-columns));
     }
   }
   @if ($type == pull) and ($index == 0) {
@@ -108,7 +103,7 @@ $breakpoints: (
   }
   @if ($type == offset) {
     .col-#{$class}-offset-#{$index} {
-      margin-left: percentage(private-div($index, $grid-columns));
+      margin-left: percentage(math.div($index, $grid-columns));
     }
   }
 }
