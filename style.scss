@@ -669,6 +669,15 @@ box-sizing: border-box;
 	h1 {
 		font-size: 19px;
 	}
+	.viewcount {
+		color: $gray-850;
+		font-weight: normal;
+		margin-bottom: 4px;
+	}
+	.below-likesaber {
+		margin-top: 16px;
+		color: $gray-600;
+	}
 }
 
 .feature-icon {
