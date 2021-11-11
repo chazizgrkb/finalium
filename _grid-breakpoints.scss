@@ -19,7 +19,7 @@ $screen-xl-min: 1200px;
     @return math.div($a, $b);
   }
   @else {
-    @return math.div($a, $b);
+    @return $a / $b;
   }
 }
 
