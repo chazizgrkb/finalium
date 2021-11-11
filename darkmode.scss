@@ -1,7 +1,7 @@
 @import "_variables";
 @import "_gradients";
 
-$blue: #186aad;
+$blue: #284a9d;
 $green: #51ad18;
 $red: #ad1818;
 
@@ -257,4 +257,8 @@ textarea, input[type=text], input[type=password] {
 
 .search, .sdsd {
 	filter: invert(1);
+}
+
+.vid-info .title a {
+	color: white;
 }
