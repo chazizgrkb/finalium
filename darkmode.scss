@@ -257,3 +257,12 @@ textarea, input[type=text], input[type=password] {
 .search, .sdsd {
 	filter: invert(1);
 }
+
+.vid-info .title a {
+	color: white;
+}
+
+//as long as we don't use color in the logo, we are fine.
+#masthead #logo-container {
+    filter: invert(1);
+}
