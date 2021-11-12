@@ -212,7 +212,15 @@ div.level {
     color: #fff;
 }
 .tab button {
-    color: #fff6;
+    color: #fff8;
+}
+
+.tab button.active {
+    color: #888;
+}
+
+#About .description-extra .title {
+    color: #666;
 }
 
 /// _style_forums \\\
