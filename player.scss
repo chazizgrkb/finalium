@@ -1,10 +1,4 @@
 @import "_variables";
-#player {
-*, ::before, ::after {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
 .yt-uix-range-tooltip-tip,
 .yt-uix-tooltip-tip {
  position:absolute;
@@ -4102,5 +4096,4 @@ ul.yt-uix-button-menu {
 }
 .player-actions-container.small-view .share-panel-hangout {
  display:none
-}
 }
